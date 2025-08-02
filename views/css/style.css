@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    outline: none;
+}
+textarea{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    background: #FF5656;
+    color: #fff;
+}
+.test{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Устанавливаем максимальное количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.resize-none{
+    resize: none;
+}
+.a_but:hover{
+    background: #FF5656;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-col{
+    flex-direction: column;
+} 
+.items-center{
+    align-items: center;
+}
+.items-end{
+    align-items: flex-end
+}
+.justify-between{
+    justify-content: space-between;
+}
+/* .justify-end{
+    justify-content: flex-end;
+} */
+
+.m-auto{
+    margin: auto;
+}
+.mt-10px{
+    margin-top: 10px;
+}
+.mt-15px{
+    margin-top: 15px;
+}
+.mt-30px{
+    margin-top: 30px;
+}
+.mb-30px{
+    margin-bottom: 30px;
+}
+.mb-20px{
+    margin-bottom: 20px;
+}
+.mb-10px{
+    margin-bottom: 10px;
+}
+.mr-10px{
+    margin-right: 10px;
+}
+.mr-20px{
+    margin-right: 20px;
+}
+.ml-10px{
+    margin-left: 10px;
+}
+.my-10px{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.my-30px{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.p-6px{
+    padding: 6px;
+}
+.p-10px{
+    padding: 10px;
+}
+.p-30px{
+    padding: 30px;
+}
+.py-30px{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.py-16px{
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+.px-10px{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px-76px{
+    padding-left: 76px;
+    padding-right: 76px;
+}
+
+.w-screen{
+    width: 100vh;
+}
+.w-340px{
+    width: 340px;
+} 
+.w-367px{
+    width: 367px;
+} 
+.w-406px{
+    width: 406px;
+}
+.w-560px{
+    width: 560px;
+}
+.h-screen{
+    height: 100vh;
+} 
+.h-100px{
+    height: 100px;
+}
+.h-190px{
+    height: 190px;
+}
+
+.bg-main{
+    background: #F7F7F7;
+}
+.bg-white{
+    background: #fff;
+}
+.bg-red{
+    background: #FF5656;
+}
+
+.radius-5px{
+    border-radius: 5px;
+}
+
+.border-none{
+    border: none;
+}
+.border-solid-gray{
+    border: 2px solid #00000015;
+}.border-solid-gray:focus{
+    border: 2px solid #FF5656;
+}
+
+.text-24{
+    font-size: 24px;
+}
+.text-base{
+    font-size: 18px;
+}
+.text-16px{
+    font-size: 16px;
+}
+.text-right{
+    text-align: end;
+}
+.text-center{
+    text-align: center;
+}
+.font-medium{
+    font-weight: 500;
+}
+.color-main{
+    color: #FF5656;
+}
+.color-red{
+    color: red;
+}
+.color-white{
+    color: white;
+}
