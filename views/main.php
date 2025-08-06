@@ -27,7 +27,7 @@
 
     <section class="container">
         <h1 class="my-30px text-center">Блоги пользователей</h1>
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap justify-center">
             <?php foreach($all_blog as $elem) { ?>
                 <a href="view_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
                     <h3 class="mb-10px"><?= htmlspecialchars($elem['title'], ENT_QUOTES, "UTF-8") ?></h3>

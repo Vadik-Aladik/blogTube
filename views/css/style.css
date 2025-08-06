@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -57,6 +58,9 @@ button:hover{
 }
 .justify-between{
     justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
 }
 /* .justify-end{
     justify-content: flex-end;
@@ -138,6 +142,9 @@ button:hover{
 .w-406px{
     width: 406px;
 }
+.w-500px{
+    width: 500px;
+}
 .w-560px{
     width: 560px;
 }
@@ -200,4 +207,65 @@ button:hover{
 }
 .color-white{
     color: white;
+}
+
+
+@media(max-width: 1300px){
+    .container{
+        width: 768px;
+    }
+    .personal{
+        flex-direction: column;
+    }
+    .personal_but{
+        margin-top: 20px;
+    }
+}
+@media(max-width: 920px){
+    .container{
+        width: 460px;
+    }
+    .personal{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .personal_but{
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        height: 105px;
+        width: 300px;
+    }
+}
+@media(max-width: 615px){
+    .container{
+        width: 320px;
+    }
+    .px-76px{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media(max-width:560px){
+    .w-560px{
+        width: 406px;
+    }
+    .w-406px{
+        width: 320px;
+    }
+    .w-367px{
+        width: 320px;
+    }
+}
+@media(max-width: 380px){
+    .container{
+        width: 310px;
+    }
+    .px-76px{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .mr-20px{
+        margin-right: 0;
+    }
 }

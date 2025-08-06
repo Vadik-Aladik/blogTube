@@ -27,16 +27,16 @@
 
     <section class="container">
 
-        <div class="flex bg-white py-16px px-10px my-30px justify-between items-center">
+        <div class="flex bg-white py-16px px-10px my-30px justify-between items-center personal">
             <h1>Здравствуйте, <span class="color-main"><?= $_SESSION['user_login'] ?></span></h1>
 
-            <div>
-                <a href="create_blog.php" class="a_but text-24 bg-main p-10px border-none radius-5px mr-20px">Создать новый блог</a>
+            <div class="flex personal_but w-500px justify-between">
+                <a href="create_blog.php" class="a_but text-24 bg-main p-10px border-none radius-5px">Создать новый блог</a>
                 <a href="../vendor/controllers/LogoutController.php" class="a_but text-24 bg-main p-10px border-none radius-5px">Выйти из аккаунта</a>
             </div>
         </div>
 
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap justify-center">
             <?php foreach($blogs_user as $elem) { ?>
                 <a href="edit_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
                     <h3 class="mb-10px"><?= htmlspecialchars($elem['title'], ENT_QUOTES, "UTF-8") ?></h3>

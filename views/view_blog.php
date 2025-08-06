@@ -29,15 +29,17 @@
     <?php require "components/header.php" ?>
 
     <section class="container bg-white p-10px my-30px px-76px py-30px rounded-5px">
-        <div class="mb-30px">
-            <h3><?= htmlspecialchars($user_blog['title'], ENT_QUOTES, "UTF-8") ?></h3>
-            <div class="flex items-center mt-10px">
-                <p class=" text-16px color-red"><?= htmlspecialchars($user_blog['login'], ENT_QUOTES, "UTF-8") ?></p>
-                <p class="ml-10px"><?= htmlspecialchars($user_blog['created_at'], ENT_QUOTES, "UTF-8") ?></p>
+        <div>
+            <div class="mb-30px">
+                <h3><?= htmlspecialchars($user_blog['title'], ENT_QUOTES, "UTF-8") ?></h3>
+                <div class="flex items-center mt-10px">
+                    <p class=" text-16px color-red"><?= htmlspecialchars($user_blog['login'], ENT_QUOTES, "UTF-8") ?></p>
+                    <p class="ml-10px"><?= htmlspecialchars($user_blog['created_at'], ENT_QUOTES, "UTF-8") ?></p>
+                </div>
             </div>
-        </div>
 
-        <div><?= htmlspecialchars($user_blog['content'], ENT_QUOTES, "UTF-8") ?></div>
+            <div><?= htmlspecialchars($user_blog['content'], ENT_QUOTES, "UTF-8") ?></div>
+        </div>
     </section>
 
 </body>

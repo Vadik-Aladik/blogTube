@@ -41,7 +41,7 @@
 
         <div class="w-406px flex justify-between">
             <button type="submit" name="delete" value="true" class="text-base bg-main p-10px border-none radius-5px">Удалить блог</button>
-            <button type="submit" name="edit" value="true" class="text-base bg-main p-10px border-none radius-5px">Сохранить изменения</button>
+            <button type="submit" name="edit" value="true" class="text-base bg-main p-10px border-none radius-5px">Редактировать</button>
         </div>
     </form>
 </body>
