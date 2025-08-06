@@ -7,7 +7,7 @@
     {
         public function blogUser()
         {
-            return $this->select('blogs', "blogs.id, blogs.title, blogs.content, users.login")->innerJoin('users', 'user_id', 'id');
+            return $this->select('blogs', "blogs.id, blogs.title, blogs.content, blogs.created_at, users.login")->innerJoin('users', 'user_id', 'id');
         }
     }
 

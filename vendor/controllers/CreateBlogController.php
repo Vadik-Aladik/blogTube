@@ -23,11 +23,13 @@
     if($create_blog){
 
         $data = $isValid->getData();
+        $created_at = date('Y-m-d H:i:s');
         
         $new_blog = $blog->create('blogs', [
             'user_id' => $_SESSION['user_id'],
             'title' => $data['title'],
             'content' => $data['content'],
+            'created_at' => $created_at
         ]);
 
         if($new_blog){
