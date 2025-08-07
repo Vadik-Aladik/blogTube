@@ -3,9 +3,11 @@
     session_start();
 
     require_once "../classes/Validate.php";
+    require_once "../classes/CSRF.php";
     require_once "../models/Blog.php";
 
     $isValid = new Validate;
+    $csrf = new CSRF();
     $blog = new Blog;
     $_SESSION['errors_msg'] = [];
     $_SESSION['old_data'] = [];
@@ -20,8 +22,7 @@
         'content' => $_POST['content'],
     ]);
 
-    if($create_blog){
-
+    if($create_blog && $csrf->checkToken($_POST['token']) && $_POST['action'] == 'create'){
         $data = $isValid->getData();
         $created_at = date('Y-m-d H:i:s');
         
@@ -41,6 +42,10 @@
             exit();
         }
         
+    }
+    else if($_POST['action'] == 'back' && $csrf->checkToken($_POST['token'])){
+        header("Location: ../../views/personal.php");
+        exit();
     }
     else{
         $_SESSION['errors_msg'] = $isValid->getErrors();

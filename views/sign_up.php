@@ -2,6 +2,9 @@
 
     session_start();
 
+    require_once "../vendor/classes/CSRF.php";
+    $csrf = new CSRF();
+
     if(isset($_SESSION['auth']) && $_SESSION['auth'] == true){
         header("Location: main.php");
         exit();
@@ -20,6 +23,8 @@
 <body class="flex h-screen bg-main">
     <form class="bg-white w-560px flex flex-col items-center m-auto py-30px radius-5px" action="../vendor/controllers/SignUpController.php" method="POST">
         <h2 class="mb-20px color-main">РЕГИСТРАЦИЯ</h2>
+        <input type="hidden" name="token" value="<?= $csrf->getToken() ?>">
+
         <div class=" flex flex-col items-end">
             <input class="w-367px p-6px radius-5px border-solid-gray" type="text" name="login" placeholder="Введите логин" value="<?php if(isset($_SESSION['old_data']['login'])) echo $_SESSION['old_data']['login'] ?>">
             <p class="text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['login'])) echo $_SESSION['errors_msg']['login'][0] ?></p>

@@ -3,9 +3,11 @@
     session_start();
 
     require_once "../classes/Validate.php";
+    require_once "../classes/CSRF.php";
     require_once "../models/User.php";
 
     $isValid = new Validate;
+    $csrf = new CSRF();
     $user = new User;
     $_SESSION['errors_msg'] = [];
     $_SESSION['old_data'] = [];
@@ -26,7 +28,7 @@
 
     $data = $isValid->getData();
 
-    if($sign_up){
+    if($sign_up && $csrf->checkToken($_POST['token'])){
         $create_user = $user->create('users', [
             'login' => $data['login'],
             'email' => $data['email'],
@@ -52,36 +54,3 @@
         exit();
     }
 ?>
-
-    <!-- // if($sign_up){
-    //     $data = $isValid->getData();
-
-    //     $create_user = $user->create('users', [
-    //         'login' => $data['login'],
-    //         'email' => $data['email'],
-    //         'password' => password_hash($data['password'], PASSWORD_BCRYPT),
-    //     ], 'sss');
-
-    //     if($create_user){
-    //         $data = $isValid->getData();
-    //         $res = $user->select('users', 'id, login', "email = '$data[email]'");
-
-    //         $_SESSION['auth'] = true;
-    //         $_SESSION['user_id'] = $res[0]['id'];
-    //         $_SESSION['user_login'] = $res[0]['login'];
-
-    //         if(isset($_SESSION['errors_msg']) && isset($_SESSION['old_data'])){
-    //             unset($_SESSION['errors_msg']);
-    //             unset($_SESSION['old_data']);
-    //         }
-
-    //         header("Location: ../../views/main.php");
-    //         exit();
-    //     }
-    // }
-    // else{
-    //     $_SESSION['errors_msg'] = $isValid->getErrors();
-    //     $_SESSION['old_data'] = $isValid->getData();
-    //     header("Location: ../../views/sign_up.php");
-    //     exit();
-    // } -->
