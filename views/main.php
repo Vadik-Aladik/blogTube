@@ -27,9 +27,9 @@
 
     <section class="container">
         <h1 class="my-30px text-center">Блоги пользователей</h1>
-        <div class="flex flex-wrap justify-center">
+        <div class="personal_blogs flex flex-wrap justify-start">
             <?php foreach($all_blog as $elem) { ?>
-                <a href="view_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
+                <a href="view_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="personal_blogs_users bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
                     <h3 class="mb-10px"><?= htmlspecialchars($elem['title'], ENT_QUOTES, "UTF-8") ?></h3>
                     <p class="mb-10px test text-base"><?= htmlspecialchars($elem['content'], ENT_QUOTES, "UTF-8") ?></p>
                     <p class="text-base text-right">author: <span class="color-main font-medium"><?= htmlspecialchars($elem['login'], ENT_QUOTES, "UTF-8") ?></span></p>

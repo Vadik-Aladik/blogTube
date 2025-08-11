@@ -56,6 +56,9 @@ button:hover{
 .items-end{
     align-items: flex-end
 }
+.justify-start{
+    justify-content: flex-start
+}
 .justify-between{
     justify-content: space-between;
 }
@@ -225,6 +228,20 @@ button:hover{
     .container{
         width: 460px;
     }
+    .main_blogs{
+        display: flex;
+        justify-content: center
+    }
+    .main_blogs_users{
+        margin-right: 0;
+    }
+    .personal_blogs{
+        display: flex;
+        justify-content: center
+    }
+    .personal_blogs_users{
+        margin-right: 0;
+    }
     .personal{
         padding-left: 5px;
         padding-right: 5px;
@@ -241,13 +258,17 @@ button:hover{
     .container{
         width: 320px;
     }
-    .px-76px{
+    .view_blog{
         padding-left: 30px;
         padding-right: 30px;
     }
+    /* .px-76px{
+        padding-left: 30px;
+        padding-right: 30px;
+    } */
 }
 @media(max-width:560px){
-    .w-560px{
+    /* .w-560px{
         width: 406px;
     }
     .w-406px{
@@ -255,17 +276,36 @@ button:hover{
     }
     .w-367px{
         width: 320px;
+    } */
+    .create_field{
+        width: 300px;
+    }
+    .create_errors{
+        width: 300px;
+    }
+    .create_buts{
+        width: 300px;
     }
 }
 @media(max-width: 380px){
     .container{
         width: 310px;
     }
-    .px-76px{
+    .sign_field{
+        width: 300px;
+    }
+    .sign_errors{
+        width: 300px;
+    }
+    .view_blog{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    /* .px-76px{
         padding-left: 5px;
         padding-right: 5px;
     }
     .mr-20px{
         margin-right: 0;
-    }
+    } */
 }

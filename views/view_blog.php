@@ -28,7 +28,7 @@
     
     <?php require "components/header.php" ?>
 
-    <section class="container bg-white p-10px my-30px px-76px py-30px rounded-5px">
+    <section class="view_blog container bg-white p-10px my-30px px-76px py-30px rounded-5px">
         <div>
             <div class="mb-30px">
                 <h3><?= htmlspecialchars($user_blog['title'], ENT_QUOTES, "UTF-8") ?></h3>

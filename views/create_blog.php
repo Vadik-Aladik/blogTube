@@ -26,16 +26,16 @@
         <input type="hidden" name="token" value="<?= $csrf->getToken() ?>">
         
         <div class="my-10px flex flex-col items-end">
-            <input class="w-406px border-solid-gray  p-6px radius-5px" type="text" name="title" value="<?php if(isset($_SESSION['old_data']['title'])) echo htmlspecialchars($_SESSION['old_data']['title'], ENT_QUOTES, "UTF-8") ?>">
-            <p class="text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['title'])) echo htmlspecialchars($_SESSION['errors_msg']['title'][0], ENT_QUOTES, "UTF-8") ?></p>
+            <input class="create_field w-406px border-solid-gray  p-6px radius-5px" type="text" name="title" value="<?php if(isset($_SESSION['old_data']['title'])) echo htmlspecialchars($_SESSION['old_data']['title'], ENT_QUOTES, "UTF-8") ?>">
+            <p class="create_errors text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['title'])) echo htmlspecialchars($_SESSION['errors_msg']['title'][0], ENT_QUOTES, "UTF-8") ?></p>
         </div>
 
         <div class="mb-30px flex flex-col items-end">
-            <textarea class="w-406px resize-none h-190px border-solid-gray p-6px radius-5px" name="content" id=""><?php if(isset($_SESSION['old_data']['content'])) echo htmlspecialchars($_SESSION['old_data']['content'], ENT_QUOTES, "UTF-8") ?></textarea>
-            <p class="text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['content'])) echo htmlspecialchars($_SESSION['errors_msg']['content'][0], ENT_QUOTES, "UTF-8") ?></p>
+            <textarea class="create_field w-406px resize-none h-190px border-solid-gray p-6px radius-5px" name="content" id=""><?php if(isset($_SESSION['old_data']['content'])) echo htmlspecialchars($_SESSION['old_data']['content'], ENT_QUOTES, "UTF-8") ?></textarea>
+            <p class="create_errors text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['content'])) echo htmlspecialchars($_SESSION['errors_msg']['content'][0], ENT_QUOTES, "UTF-8") ?></p>
         </div>
 
-        <div class="w-406px flex justify-between">
+        <div class="create_buts w-406px flex justify-between">
             <button name="action" value="back" class="text-24 bg-main p-10px border-none radius-5px">Назад</button>
             <button name="action" value="create" class="text-24 bg-main p-10px border-none radius-5px">Создать</button>
         </div>

@@ -36,9 +36,9 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap justify-center">
+        <div class="main_blogs flex flex-wrap justify-start">
             <?php foreach($blogs_user as $elem) { ?>
-                <a href="edit_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
+                <a href="edit_blog.php?blog_id=<?= urlencode($elem['id']) ?>" class="main_blogs_users bg-white radius-5px px-10px py-16px w-340px mb-10px mr-20px">
                     <h3 class="mb-10px"><?= htmlspecialchars($elem['title'], ENT_QUOTES, "UTF-8") ?></h3>
                     <p class="mb-10px test text-base"><?= htmlspecialchars($elem['content'], ENT_QUOTES, "UTF-8") ?></p>
                     <p class="text-base text-right">author: <span class="color-main font-medium"><?= htmlspecialchars($_SESSION['user_login'], ENT_QUOTES, "UTF-8") ?></span></p>

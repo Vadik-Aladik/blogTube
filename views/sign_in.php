@@ -26,13 +26,13 @@
         <input type="hidden" name="token" value="<?= $csrf->getToken() ?>">
 
         <div class="mt-10px flex flex-col items-end">
-            <input class="w-367px p-6px radius-5px border-solid-gray" type="text" name="email" placeholder="Введите почту" value="<?php if(isset($_SESSION['old_data']['email'])) echo $_SESSION['old_data']['email'] ?>">
-            <p class="text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['email'])) echo $_SESSION['errors_msg']['email'][0] ?></p>
+            <input class="sign_field w-367px p-6px radius-5px border-solid-gray" type="text" name="email" placeholder="Введите почту" value="<?php if(isset($_SESSION['old_data']['email'])) echo $_SESSION['old_data']['email'] ?>">
+            <p class="sign_errors text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['email'])) echo $_SESSION['errors_msg']['email'][0] ?></p>
         </div>
         
         <div class="mt-10px flex flex-col items-end">
-            <input class=" w-367px p-6px radius-5px border-solid-gray" type="password" name="password" placeholder="Введите пароль" value="<?php if(isset($_SESSION['old_data']['password'])) echo $_SESSION['old_data']['password'] ?>">
-            <p class="text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['password'])) echo $_SESSION['errors_msg']['password'][0] ?></p>
+            <input class="sign_field w-367px p-6px radius-5px border-solid-gray" type="password" name="password" placeholder="Введите пароль" value="<?php if(isset($_SESSION['old_data']['password'])) echo $_SESSION['old_data']['password'] ?>">
+            <p class="sign_errors text-right color-red w-367px"><?php if(isset($_SESSION['errors_msg']['password'])) echo $_SESSION['errors_msg']['password'][0] ?></p>
         </div>
         
         <button type="submit" class="mt-30px text-24 bg-main p-10px border-none radius-5px">Войти</button>
